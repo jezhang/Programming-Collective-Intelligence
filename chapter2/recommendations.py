@@ -47,8 +47,11 @@ critics = {
         'Superman Returns': 5.0,
         'You, Me and Dupree': 3.5,
     },
-    'Toby': {'Snakes on a Plane': 4.5, 'You, Me and Dupree': 1.0,
-             'Superman Returns': 4.0},
+    'Toby': {
+        'Snakes on a Plane': 4.5, 
+        'You, Me and Dupree': 1.0,
+        'Superman Returns': 4.0
+    },
 }
 
 
@@ -187,7 +190,7 @@ def calculateSimilarItems(prefs, n=10):
         # Status updates for large datasets
         c += 1
         if c % 100 == 0:
-            print '%d / %d' % (c, len(itemPrefs))
+            print ('%d / %d') % (c, len(itemPrefs))
         # Find the most similar items to this one
         scores = topMatches(itemPrefs, item, n=n, similarity=sim_distance)
         result[item] = scores
